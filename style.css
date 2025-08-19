@@ -1,0 +1,132 @@
+:root {
+  --tfont-size: 1rem;
+  --hfont-size: 2.5rem;
+  --font-family: 'Segoe UI', sans-serif;
+
+  /* Darker, calmer palette */
+  --bg-gradient: linear-gradient(135deg, #1e293b, #334155);
+  --card-bg: #ffffff;
+  --text-color: #222;
+  --primary: #06b6d4;
+  --primary-hover: #0891b2;
+  --border-color: #ccc;
+  --result-bg: #f0fdfa;
+  --result-border: #06b6d4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+#h1 {
+  font-size: var(--hfont-size);
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+.input {
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  font-size: var(--tfont-size);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+#text-input {
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  width: 100%;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#text-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.4);
+}
+
+#check-btn {
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#check-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+#result {
+  border: 2px solid var(--result-border);
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  background: var(--result-bg);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  #h1 {
+    font-size: 2rem;
+  }
+  .input {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #h1 {
+    font-size: 1.6rem;
+  }
+  #check-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
